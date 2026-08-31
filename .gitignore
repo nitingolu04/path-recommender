@@ -1,0 +1,28 @@
+# ── Secrets ───────────────────────────────────────────────────────────────────
+# Streamlit reads API keys from here. It must never be committed.
+# Copy .streamlit/secrets.toml.example to .streamlit/secrets.toml and edit that.
+.streamlit/secrets.toml
+.env
+*.key
+
+# ── Generated data ────────────────────────────────────────────────────────────
+# Recreated automatically by db.init_db() on first run, and it holds session
+# history that is neither reproducible nor meaningful to anyone else.
+data/recommender.db
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ── Environments ──────────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Editors and OS ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

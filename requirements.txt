@@ -1,0 +1,16 @@
+# Pinned to the versions this project is verified against.
+# Previously these were open ">=" ranges, which meant two machines installing on
+# different days could resolve different majors and behave differently.
+streamlit==1.61.1
+sentence-transformers==5.7.0
+pandas==2.3.2
+numpy==2.3.3
+torch==2.13.0
+
+# Used by the catalog generator and reserved for the retrieval baseline
+# comparison (TF-IDF vs embeddings).
+scikit-learn==1.9.0
+
+# Used only by the optional LLM answer layer (app/llm.py). The app runs fully
+# without any LLM configured, but this is a hard dependency of that module.
+requests==2.32.5

@@ -1,0 +1,20 @@
+# Streamlit configuration.
+#
+# fileWatcherType = "none"
+#   Streamlit's dev file-watcher walks every loaded module to detect edits. The
+#   `transformers` package lazily imports its vision models on attribute access, so
+#   the watcher triggers imports of ~40 image processors that require `torchvision`
+#   — which this project does not install and does not need, since it only uses text
+#   embeddings. Each failed import prints a full traceback, producing a wall of
+#   alarming output at startup that has nothing to do with this application.
+#
+#   Turning the watcher off removes that noise entirely and shortens startup. The
+#   only thing lost is auto-reload on file save, which matters during development
+#   but not when running or demonstrating the app. Use "poll" instead of "none" if
+#   you want hot-reload back while keeping the module scan disabled.
+[server]
+fileWatcherType = "none"
+
+[browser]
+# No telemetry from a local prototype.
+gatherUsageStats = false
